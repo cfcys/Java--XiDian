@@ -1,0 +1,31 @@
+
+package task2;
+
+public class main {
+public static class Stu{
+	String num,name,ClassNum;
+	int scoreC,scoreE,scoreM;
+	void getInfor(String num,String name,String classNum){
+		num = this.num;
+		name = this.name;
+		classNum = this.ClassNum;
+	}
+}
+public static class Teacher{
+	String num,name,Title,Department;
+	void LuRu(Stu stu){
+		
+	}
+	void TongJi(Stu stu) {
+		
+	}
+}
+	public static void main(String[] args) {
+		Stu stu = new Stu();
+		stu.num = "123456";
+		stu.name = "XiaoMing";
+		stu.
+		
+	}
+
+}

@@ -1,0 +1,39 @@
+package task2;
+
+public class main {
+public static class Stu{
+	String num,name,ClassNum;
+	int scoreC,scoreE,scoreM,scoreAver;
+	void getInfor(String num,String name,String classNum){
+		this.num = num;
+		this.name = name;
+		this.ClassNum = classNum;
+	}
+	void getScore(int C,int E,int M) {
+		this.scoreC = C;
+		this.scoreE = E;
+		this.scoreM = M;
+	}
+}
+public static class Teacher{
+	String Num,Name,Title,Department;
+	Teacher(String num,String name,String title,String department){
+	this.Num = num;this.Name = name;
+	this.Title = title;this.Department = department;
+	}
+	void LuRu(Stu stu,int c,int e,int m){
+		stu.getScore(c, e, m);
+	}
+	void TongJi(Stu stu) {
+		stu.scoreAver = (stu.scoreC+stu.scoreE+stu.scoreM)/3;
+		System.out.println(stu.name+"的均分为"+stu.scoreAver);
+	}
+}
+	public static void main(String[] args) {
+		Stu XiaoMing = new Stu();
+		Teacher Liu = new Teacher("001","Liu","director","foreign languages institute");
+		XiaoMing.getInfor("123456","XiaoMing","20210001");
+		Liu.LuRu(XiaoMing, 89, 99, 86);
+		Liu.TongJi(XiaoMing);
+	}
+}
